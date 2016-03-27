@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="mytool.js"></script>
+	<link type="text/css" rel="stylesheet" href="popbox.css"/>
+  <style type="text/css">
+	*{margin:0px;padding:0px;}
+	html,body{height:100%;background:black;}
+	section{width:200px;height:100px;margin:120px auto;perspective:1000px;
+	}
+	section div{width:200px;height:100px;position:relative;transform-style:preserve-3d;transition:2s;}
+	section div ul{transform-style:preserve-3d;}
+	section div ul li{width:200px;height:100px;list-style:none;background:#66ff66;position:absolute;
+	-webkit-box-reflect:below 0px linear-gradient(transparent 40%,rgba(255,255,255,.3));}
+	section div ul li:nth-child(1){transform:rotateY(60deg) translateZ(220px);background:url("images/1.jpg");}
+	section div ul li:nth-child(2){transform:rotateY(120deg) translateZ(220px);;background:url("images/2.jpg");}
+	section div ul li:nth-child(3){transform:rotateY(180deg) translateZ(220px);;background:url("images/3.jpg");}
+	section div ul li:nth-child(4){transform:rotateY(240deg) translateZ(220px);;background:url("images/4.jpg");}
+	section div ul li:nth-child(5){transform:rotateY(300deg) translateZ(220px);;background:url("images/5.jpg");}
+	section div ul li:nth-child(6){transform:rotateY(0deg) translateZ(220px);;background:url("images/6.jpg");}
+	.s1 div{transform: rotateX(0deg) rotateY(0deg);}
+	.s2 div{transform: rotateX(-10deg) rotateY(0deg);z-index:90;}
+	.s3 div{transform: rotateX(-18deg) rotateY(0deg) ;}
+	
+  </style>
+ </head>
+ <body>
+	
+	<section class="s1">
+		<div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</section>
+	<section class="s2">
+		<div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</section>
+	<section class="s3">
+		<div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</section>
+
+  <script>
+  var index=0;
+		function next()
+		{
+			var deg=(++index)*60+"deg";
+			$(".s1 div").css({"transform":"rotateX(0deg) rotateY(-"+deg+")"});
+			$(".s2 div").css({"transform":"rotateX(-10deg) rotateY(-"+deg+")"});
+			$(".s3 div").css({"transform":"rotateX(-18deg) rotateY(-"+deg+")"});
+		}
+		//window.setInterval("next()",3000);
+  </script>
+ </body>
+</html>
